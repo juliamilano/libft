@@ -19,8 +19,8 @@ char *ft_strnstr(const char	*haystack, const char *needle, size_t len)
 		    i++;
 		else if(tmp[i+j] == needle[j])
 		{
-		    if(ft_memcmpf(tmp+i, needle, len) == 0)
-		        return (lens2 <= len) ? tmp+i : "(null)";
+		    if(ft_memcmpf((char *)tmp+i, needle, len) == 0)
+		        return (lens2 <= len) ? (char *)tmp+i : "(null)";
 		}
 		len--;
 	}
